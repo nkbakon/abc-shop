@@ -17,6 +17,7 @@ Route::group(['middleware' => ['auth']], function() {
         return view('home');
     })->name('home');
     Route::resource('categories', CategoryController::class);
+    Route::resource('products', ProductController::class);
 
     Route::resource('users', UserController::class);
 });

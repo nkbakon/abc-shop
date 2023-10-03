@@ -38,7 +38,7 @@
                             <a href="{{ route('categories.index') }}"><li class="{{ (request()->segment(1) == 'categories') ? 'bg-indigo-700 border-indigo-700': '' }} px-3 py-1 flex space-x-2 mt-10 rounded-md border-indigo-500 cursor-pointer hover:bg-indigo-600 hover:border-indigo-700">					
                                 <span class="font-semibold"><i class="fa-solid fa-bars-staggered"></i> Categories</span>
                             </li></a>
-                            <a href=""><li class="{{ (request()->segment(1) == 'products') ? 'bg-indigo-700 border-indigo-700': '' }} px-3 py-1 flex space-x-2 mt-10 rounded-md border-indigo-500 cursor-pointer hover:bg-indigo-600 hover:border-indigo-700">					
+                            <a href="{{ route('products.index') }}"><li class="{{ (request()->segment(1) == 'products') ? 'bg-indigo-700 border-indigo-700': '' }} px-3 py-1 flex space-x-2 mt-10 rounded-md border-indigo-500 cursor-pointer hover:bg-indigo-600 hover:border-indigo-700">					
                                 <span class="font-semibold"><i class="fa-solid fa-box-open"></i> Products</span>
                             </li></a>
                             <a href="{{ route('logout') }}"><li class="{{ (request()->segment(1) == 'logout') ? 'bg-indigo-700 border-indigo-700': '' }} px-3 py-1 flex space-x-2 mt-10 rounded-md border-indigo-500 cursor-pointer hover:bg-indigo-600 hover:border-indigo-700">					
