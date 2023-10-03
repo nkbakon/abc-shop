@@ -18,6 +18,8 @@ Route::group(['middleware' => ['auth']], function() {
     })->name('home');
     Route::resource('categories', CategoryController::class);
     Route::resource('products', ProductController::class);
-
-    Route::resource('users', UserController::class);
+    Route::put('/profile', [PasswordController::class, 'update'])->name('password.update');
+    Route::group(['middleware' => ['useradmin']], function() {
+        Route::resource('users', UserController::class);
+    });
 });

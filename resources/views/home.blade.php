@@ -17,10 +17,10 @@
                     </div>
                 @endif       
                 <h5 class="font-bold text-black">Change Password</h5><br>
-                <form method="POST" action="">
+                <form method="POST" action="{{ route('password.update') }}">
                     @csrf
-                    @method('put')                    
-                    <input type="hidden" name="userid"  id="userid">
+                    @method('put')
+                    
                     Current Password:
                     <br>
                     <input type="password" name="current_password" id="current_password" class="block w-96 appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="current password" required>
